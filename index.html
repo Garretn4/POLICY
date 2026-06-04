@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpine Life Solutions LLC — Life Insurance Brokerage</title>
+<meta name="description" content="Alpine Life Solutions LLC. Independent life insurance brokerage helping families find final expense and life coverage that fits their needs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#f4f2ee;
+    --paper-2:#e9e6df;
+    --line:#0a0a0a;
+    --accent:#1a1a1a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Archivo',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .display{font-family:'Archivo Black',sans-serif;letter-spacing:-0.02em;line-height:0.95;text-transform:uppercase;}
+
+  /* ---- nav ---- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--paper);
+    border-bottom:2px solid var(--line);
+  }
+  nav{
+    max-width:1200px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 28px;
+  }
+  .brand{font-family:'Archivo Black',sans-serif;font-size:18px;letter-spacing:0.01em;text-transform:uppercase;}
+  .nav-links{display:flex;gap:26px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;}
+  .nav-links a{text-decoration:none;padding-bottom:2px;border-bottom:2px solid transparent;transition:border-color .2s;}
+  .nav-links a:hover{border-color:var(--ink);}
+
+  /* ---- hero ---- */
+  .hero{
+    max-width:1200px;margin:0 auto;
+    padding:90px 28px 70px;
+    display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:end;
+  }
+  .hero h1{font-size:clamp(44px,7vw,104px);}
+  .hero .sub{
+    font-style:italic;font-weight:500;font-size:clamp(18px,2vw,26px);
+    margin-top:24px;max-width:30ch;
+  }
+  .hero-card{
+    border:2px solid var(--line);
+    padding:30px;
+    background:var(--paper-2);
+  }
+  .hero-card .label{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:.6;}
+  .hero-card .val{font-family:'Archivo Black',sans-serif;font-size:20px;margin:4px 0 18px;text-transform:uppercase;}
+  .hero-card .val:last-child{margin-bottom:0;}
+
+  /* ---- divider strip ---- */
+  .strip{
+    border-top:2px solid var(--line);border-bottom:2px solid var(--line);
+    background:var(--ink);color:var(--paper);
+    overflow:hidden;white-space:nowrap;
+  }
+  .strip-inner{display:inline-block;padding:14px 0;animation:marquee 26s linear infinite;}
+  .strip-inner span{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:15px;letter-spacing:0.04em;margin:0 26px;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---- sections ---- */
+  section.block{max-width:1200px;margin:0 auto;padding:70px 28px;}
+  .block h2{font-size:clamp(28px,4vw,52px);margin-bottom:30px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--line);}
+  .grid3 .cell{padding:30px;border-right:2px solid var(--line);}
+  .grid3 .cell:last-child{border-right:none;}
+  .grid3 .cell h3{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:17px;margin-bottom:10px;}
+  .grid3 .cell p{font-size:15px;}
+
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+  .about p{font-size:17px;margin-bottom:16px;}
+
+  /* ---- footer ---- */
+  footer{
+    border-top:2px solid var(--line);
+    background:var(--paper-2);
+  }
+  .foot-inner{
+    max-width:1200px;margin:0 auto;padding:50px 28px;
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;
+  }
+  .foot-inner .brand-lg{font-family:'Archivo Black',sans-serif;font-size:clamp(26px,4vw,44px);text-transform:uppercase;line-height:0.95;}
+  .foot-col h4{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:.6;margin-bottom:12px;}
+  .foot-col a,.foot-col p{display:block;text-decoration:none;font-size:14px;margin-bottom:8px;}
+  .foot-col a:hover{text-decoration:underline;}
+  .legal-bar{border-top:2px solid var(--line);padding:18px 28px;max-width:1200px;margin:0 auto;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  .legal-bar a{font-weight:600;}
+
+  @media(max-width:820px){
+    .hero{grid-template-columns:1fr;padding-top:50px;}
+    .grid3{grid-template-columns:1fr;}
+    .grid3 .cell{border-right:none;border-bottom:2px solid var(--line);}
+    .grid3 .cell:last-child{border-bottom:none;}
+    .about{grid-template-columns:1fr;gap:24px;}
+    .foot-inner{grid-template-columns:1fr;}
+    .nav-links{gap:16px;font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">Alpine Life Solutions</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1 class="display">Finding coverage that fits all of your needs</h1>
+    <p class="sub">Life insurance broker protecting families daily.</p>
+  </div>
+  <div class="hero-card">
+    <div class="label">Agent</div>
+    <div class="val">Garret Nelson</div>
+    <div class="label">National Producer Number</div>
+    <div class="val">22205258</div>
+    <div class="label">Phone</div>
+    <div class="val">(970) 709-7705</div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="strip-inner">
+    <span>Final Expense</span><span>•</span><span>Whole Life</span><span>•</span><span>Term Life</span><span>•</span><span>Independent Brokerage</span><span>•</span>
+    <span>Final Expense</span><span>•</span><span>Whole Life</span><span>•</span><span>Term Life</span><span>•</span><span>Independent Brokerage</span><span>•</span>
+  </div>
+</div>
+
+<section class="block">
+  <h2 class="display">What we do</h2>
+  <div class="grid3">
+    <div class="cell">
+      <h3>Final Expense</h3>
+      <p>Affordable whole life coverage designed to handle funeral, burial, and end-of-life costs so your family isn't left with the bill.</p>
+    </div>
+    <div class="cell">
+      <h3>Life Insurance</h3>
+      <p>Whole and term life options matched to your budget and health. As an independent broker, coverage is shopped across multiple carriers.</p>
+    </div>
+    <div class="cell">
+      <h3>Honest Guidance</h3>
+      <p>No pressure. A licensed broker walks you through your options and finds the policy that actually fits your situation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="border-top:2px solid var(--line);">
+  <div class="about">
+    <h2 class="display">Independent.<br>On your side.</h2>
+    <div>
+      <p>Alpine Life Solutions LLC is an independent life insurance brokerage based in Colorado, serving families across multiple states.</p>
+      <p>Because we're independent, we aren't tied to a single insurance company. That means coverage is shopped on your behalf to find the right fit at the right price.</p>
+      <p>Every client works directly with a licensed broker — never a call center.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="foot-inner">
+    <div>
+      <div class="brand-lg">Alpine Life<br>Solutions</div>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:+19707097705">(970) 709-7705</a>
+      <a href="mailto:garret.nelson@alpinelifesolutions.com">garret.nelson@alpinelifesolutions.com</a>
+      <p>7895 S Dayton St, Unit 376<br>Centennial, CO 80112</p>
+    </div>
+    <div class="foot-col">
+      <h4>Legal</h4>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <p style="opacity:.6;margin-top:10px;">NPN #22205258</p>
+    </div>
+  </div>
+  <div class="legal-bar">
+    <span>© <span id="yr"></span> Alpine Life Solutions LLC. All rights reserved.</span>
+    <span><a href="privacy-policy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
